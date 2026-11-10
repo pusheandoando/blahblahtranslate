@@ -1,0 +1,14 @@
+/* blahblahtranslate/shared/theme.css */
+.bbt-theme {
+    --bbt-bg: #17130f;
+    --bbt-surface: #201a15;
+    --bbt-field: #120f0c;
+    --bbt-border: #3b3128;
+    --bbt-text: #ead4bf;
+    --bbt-text-strong: #f4f6f5;
+    --bbt-text-muted: #9c8a78;
+    --bbt-accent: #c08e5b;
+    --bbt-accent-soft: #bd8d5c;
+    --bbt-accent-hover: #d3ac73;
+    --bbt-accent-text: #17130f;
+}

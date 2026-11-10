@@ -1,0 +1,148 @@
+/* blahblahtranslate/shared/language-picker.css */
+:is(#bbt-popover, html) .bbt-picker {
+    display: block;
+    position: relative;
+    min-width: 0;
+}
+
+:is(#bbt-popover, html) .bbt-picker-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    padding: 7px 8px;
+    background: var(--bbt-field);
+    color: var(--bbt-text);
+    border: 1px solid var(--bbt-border);
+    border-radius: 0;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+}
+
+:is(#bbt-popover, html) .bbt-picker-trigger:hover:enabled,
+:is(#bbt-popover, html) .bbt-open .bbt-picker-trigger {
+    border-color: var(--bbt-accent-soft);
+}
+
+:is(#bbt-popover, html) .bbt-picker-trigger:focus-visible {
+    outline: 1px solid var(--bbt-accent-soft);
+    outline-offset: -1px;
+}
+
+:is(#bbt-popover, html) .bbt-picker-trigger:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+:is(#bbt-popover, html) .bbt-picker-trigger svg {
+    color: var(--bbt-text-muted);
+}
+
+:is(#bbt-popover, html) .bbt-picker-value {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+:is(#bbt-popover, html) .bbt-picker-panel {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    min-width: 100%;
+    width: 220px;
+    background: var(--bbt-surface);
+    border: 1px solid var(--bbt-border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    z-index: 10;
+}
+
+:is(#bbt-popover, html) .bbt-open .bbt-picker-panel {
+    display: flex;
+}
+
+:is(#bbt-popover, html) .bbt-picker-up .bbt-picker-panel {
+    top: auto;
+    bottom: calc(100% + 4px);
+}
+
+:is(#bbt-popover, html) .bbt-picker-align-end .bbt-picker-panel {
+    left: auto;
+    right: 0;
+}
+
+:is(#bbt-popover, html) .bbt-picker-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    border-bottom: 1px solid var(--bbt-border);
+    color: var(--bbt-text-muted);
+}
+
+:is(#bbt-popover, html) .bbt-picker-search:focus-within {
+    border-bottom-color: var(--bbt-accent-soft);
+}
+
+:is(#bbt-popover, html) .bbt-picker-input {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 0;
+    background: transparent;
+    color: var(--bbt-text);
+    border: none;
+    border-radius: 0;
+    outline: none;
+    font: inherit;
+}
+
+:is(#bbt-popover, html) .bbt-picker-input::placeholder {
+    color: var(--bbt-text-muted);
+}
+
+:is(#bbt-popover, html) .bbt-picker-list {
+    display: block;
+    position: relative;
+    max-height: 220px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bbt-border) transparent;
+}
+
+:is(#bbt-popover, html) .bbt-picker-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 10px;
+    color: var(--bbt-text);
+    cursor: pointer;
+}
+
+:is(#bbt-popover, html) .bbt-picker-option.bbt-selected {
+    color: var(--bbt-accent-hover);
+}
+
+:is(#bbt-popover, html) .bbt-picker-option:hover,
+:is(#bbt-popover, html) .bbt-picker-option.bbt-active {
+    background: var(--bbt-border);
+    color: var(--bbt-text-strong);
+}
+
+:is(#bbt-popover, html) .bbt-picker-option-label {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+:is(#bbt-popover, html) .bbt-picker-empty {
+    display: block;
+    padding: 10px;
+    color: var(--bbt-text-muted);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="bbt-theme">
+<head>
+    <meta charset="UTF-8">
+    <title>Blah Blah Translate</title>
+    <link rel="stylesheet" href="shared/theme.css">
+    <link rel="stylesheet" href="shared/language-picker.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <section id="view-main" class="view">
+        <header class="view-header">
+            <span class="view-title">Blah Blah Translate</span>
+        </header>
+        <div class="settings">
+            <span class="field-label">Your language</span>
+            <div id="user-language"></div>
+        </div>
+        <div class="menu">
+            <button type="button" class="menu-button" id="open-translator-view">
+                <span data-icon="languages"></span>
+                <span>Translator</span>
+            </button>
+            <button type="button" class="menu-button" id="open-page-view">
+                <span data-icon="languages-globe"></span>
+                <span>Translate current page</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="view-page" class="view" hidden>
+        <header class="view-header">
+            <button type="button" class="back-button" data-back aria-label="Back">
+                <span data-icon="arrow-left"></span>
+            </button>
+            <span class="view-title">Translate current page</span>
+        </header>
+        <div class="form">
+            <span class="field-label">Translate to</span>
+            <div id="page-target-language"></div>
+            <button type="button" class="primary-button" id="start-page-translation-button">Start</button>
+            <span class="status status-error" id="page-status"></span>
+        </div>
+    </section>
+
+    <section id="view-translator" class="view" hidden>
+        <header class="view-header">
+            <button type="button" class="back-button" data-back aria-label="Back">
+                <span data-icon="arrow-left"></span>
+            </button>
+            <span class="view-title">Translator</span>
+        </header>
+        <div class="language-row">
+            <div class="picker-host" id="translator-source"></div>
+            <button type="button" class="icon-button" id="swap-languages-button" aria-label="Swap languages">
+                <span data-icon="arrow-left-right"></span>
+            </button>
+            <div class="picker-host" id="translator-target"></div>
+        </div>
+        <div class="translator-panels">
+            <textarea id="translator-input" placeholder="Enter text (Ctrl+Enter to translate)"
+                spellcheck="false"></textarea>
+            <button type="button" class="primary-button" id="translate-button">Translate</button>
+            <textarea id="translator-output" placeholder="Translation" spellcheck="false" readonly></textarea>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="https://github.com/pusheandoando/blahblahtranslate/" target="_blank" rel="noopener noreferrer">Source
+            code</a>
+    </footer>
+
+    <script src="lib/google-translate-unofficial.global.js"></script>
+    <script src="shared/constants.js"></script>
+    <script src="shared/languages.js"></script>
+    <script src="shared/prefs.js"></script>
+    <script src="shared/async-utils.js"></script>
+    <script src="shared/manual-translation.js"></script>
+    <script src="shared/dom-builder.js"></script>
+    <script src="shared/icons.js"></script>
+    <script src="shared/language-picker.js"></script>
+    <script src="popup/views.js"></script>
+    <script src="popup/page-view.js"></script>
+    <script src="popup/translator-view.js"></script>
+    <script src="popup/user-language-view.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

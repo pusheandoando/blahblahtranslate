@@ -1,0 +1,8 @@
+{
+  "name": "blahblahtranslate",
+  "description": "Chrome extension that translates pages, selections and typed text.",
+  "private": true,
+  "scripts": {
+    "setup": "node download-lib.js"
+  }
+}
